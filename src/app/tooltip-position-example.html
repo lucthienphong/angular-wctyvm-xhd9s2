@@ -1,0 +1,25 @@
+<mat-form-field class="example-user-input" appearance="fill">
+  <mat-label>Tooltip position</mat-label>
+  <mat-select [formControl]="position">
+    <mat-option
+      *ngFor="let positionOption of positionOptions"
+      [value]="positionOption"
+    >
+      {{positionOption}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<button
+  mat-raised-button
+  matTooltip="Aaaaaa"
+  [matTooltipShowDelay]="showDelay.value"
+  [matTooltipHideDelay]="hideDelay.value"
+  aria-label="Button that displays a tooltip in various positions"
+>
+  {{title}}
+</button>
+
+<!-- Copyright 2022 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at https://angular.io/license -->
