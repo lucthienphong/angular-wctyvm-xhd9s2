@@ -22,7 +22,8 @@ export class TooltipPositionExample {
   position = new FormControl(this.positionOptions[0]);
   showDelay = new FormControl(1000);
   hideDelay = new FormControl(2000);
-  title = '';
+  // title = '';
+  title = btoa('web-padsvc-public:1bbc4b3d-0274-4d40-9398-0be23c8793fe');
 
   async ngOnInit(): Promise<void> {
     this.test();
@@ -31,14 +32,14 @@ export class TooltipPositionExample {
     let nghQuocTichKhacStr: any = '';
     let quocTichs: string[] = ['GR', 'KW', 'HK', 'LB'];
 
-    //for (let i = 0; i < 8; i++) {
-    for (let i = 0; i < quocTichs.length; i++) {
-      this.title += quocTichs[i];
-      if (i < quocTichs.length - 1) this.title += ',';
-    }
-    if (this.title != '') {
-      this.title = '["\'' + this.title + '\'"]';
-    }
+    // //for (let i = 0; i < 8; i++) {
+    // for (let i = 0; i < quocTichs.length; i++) {
+    //   this.title += quocTichs[i];
+    //   if (i < quocTichs.length - 1) this.title += ',';
+    // }
+    // if (this.title != '') {
+    //   this.title = '["\'' + this.title + '\'"]';
+    // }
     console.log(this.title);
   }
 }
